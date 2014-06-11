@@ -231,6 +231,7 @@ PRODUCT_PACKAGES += \
 
 # Wifi firmware
 PRODUCT_PACKAGES += \
+    libwcnss_qmi \
     wcnss_service
 
 # WiFi
