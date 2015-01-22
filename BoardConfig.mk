@@ -165,6 +165,7 @@ TARGET_RECOVERY_INITRC := device/htc/m8/recovery/etc/init.rc
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 
+<<<<<<< HEAD
 # TWRP Build Flags
 BOARD_RECOVERY_BLDRMSG_OFFSET := 2048
 DEVICE_RESOLUTION := 1080x1920
@@ -174,6 +175,36 @@ TW_NO_SCREEN_BLANK := true
 
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/msm_dwc3/f9200000.dwc3/gadget/lun%d/file
+=======
+# SELinux
+include device/qcom/sepolicy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += device/htc/m8/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    cir_fw_update.te \
+    device.te \
+    file_contexts \
+    file.te \
+    hcheck.te \
+    init.te \
+    kcal_dev.te \
+    kernel.te \
+    mediaserver.te \
+    mm-qcamerad.te \
+    mpdecision.te \
+    platform_app.te \
+    property_contexts \
+    recovery.te \
+    radio.te \
+    rmt_storage.te \
+    system_app.te \
+    system_server.te \
+    tap2wake_dev.te \
+    thermal-engine.te \
+    ueventd.te \
+    vibe_dev.te \
+    vold.te
+>>>>>>> 5c57f80... cmhw: Don't cache tap-to-wake setting
 
 # Vendor Init
 TARGET_UNIFIED_DEVICE := true
