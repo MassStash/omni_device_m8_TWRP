@@ -19,6 +19,24 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 $(call inherit-product-if-exists, vendor/htc/m8-common/m8-common-vendor.mk)
 
+<<<<<<< HEAD
+=======
+# overlays
+DEVICE_PACKAGE_OVERLAYS += device/htc/m8/overlay
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1080
+TARGET_BOOTANIMATION_HALF_RES := true
+
+# Device uses ultra-high-density artwork where available
+PRODUCT_AAPT_CONFIG := hdpi xhdpi xxhdpi
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
+# Dot View Case
+PRODUCT_PACKAGES += Dotcase
+
+>>>>>>> b1cca71... m8: use halfres boot animation
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
