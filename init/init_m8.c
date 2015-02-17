@@ -79,9 +79,16 @@ void vendor_load_properties()
     } else if (strstr(bootmid, "0P6B70000")) {
         /* m8spr (m8whl) */
         cdma_properties("1", "8", "310120", "Sprint");
+<<<<<<< HEAD
         property_set("ro.product.device", "m8whl");
         property_set("ro.product.model", "831C");
         property_set("ro.build.product", "m8whl");
+=======
+        property_set("ro.build.fingerprint", "htc/sprint_wwe/htc_m8whl:5.0.1/LRX22C/476182.10:user/release-keys");
+        property_set("ro.build.description", "4.20.651.10 CL476182 release-keys");
+        property_set("ro.product.device", "htc_m8whl");
+        property_set("ro.build.product", "htc_m8whl");
+>>>>>>> 2f3b9a9... m8: update sprint fingerprint/description from OTA
         property_set("telephony.sms.pseudo_multipart", "1");
         property_set("ro.ril.oem.ecclist", "911");
         property_set("ro.ril.enable.pre_r8fd=1", "1");
